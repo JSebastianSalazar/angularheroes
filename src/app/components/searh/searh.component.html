@@ -1,0 +1,44 @@
+<div class="layout ">
+  <div class="row" *ngIf="heroe.length == 0" >
+    <div class="col-md-12">
+      <div    class="alert alert-info" role="info">
+        No existen resultados con el termino: {{ termino }}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container  animated fadeIn" *ngFor="let heroe of heroe">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="d-flex justify-content-center ">
+          <img [src]="heroe.img" class="" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <h1>({{heroe.aparicion | date: 'y'}})</h1>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <h1>Nombre del heroe</h1>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <h2>{{heroe.nombre | uppercase}}</h2>
+      </div>
+      <div class="col-md-12 ">
+        <p>{{heroe.bio}}</p>
+      </div>
+      <div class="col-md-8 col-sm-12">
+        <h2>Pertenece a la casa de: </h2>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <h2>{{heroe.casa}}</h2>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center space-btn ">
+      <button class="cursor" (click)="atras()" type="button" class="btn btn-danger">Volver</button>
+    </div>
+  </div>
+
+</div>

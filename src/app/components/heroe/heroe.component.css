@@ -1,7 +1,20 @@
-.main-container{
-    margin-top: 20px;
-}
+.container-name{
+   width: 50%;
 
+}
+.container-img{
+    width: 50%;
+
+}
+.layout{
+    display: inline-flex;
+    width: 100%;
+    clear: both;
+    content: "";
+}
+.space-btn{
+    margin-top:10%;
+}
 /**  Animaciones*/
 
 .animated {
@@ -29,4 +42,7 @@
   
   .fadeIn {
     animation-name: fadeIn;
+  }
+  .cursor{
+      cursor: pointer;
   }
